@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Rain forecast blog signup page</title>
-</head>
-<body >
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="navbar navbar-dark bg-warning">
-                <span class="navbar-dark mb-0 h1">Robocast</span>
-                <div class="col-md-8">
-                <a class="btn btn-secondary" href=index.html
-                      role="button">Home </a>
-                <a class="btn btn-secondary" href=signup.html
-                   role="button">Sign Up </a>
-                </div>
-                <div class="col-md-2">
-                    <img src="img/robot.png" alt="Robot placeholder image" width="200"
-                 height="150">
-                </div>
-            </nav>
-        </div>
-    </div><br>
+{% extends "base.html" %}
+{% block title %} Rain forecast blog signup page {% endblock %}
+{% block contents %}
     <div class="row">
         <div class="col-md-10">
             <div class="form-group">
@@ -38,6 +14,4 @@
             </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+{% endblock %}
