@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 {% block title %} Rain forecast blog signup page {% endblock %}
 {% block contents %}
-    <div class="row">
-        <div class="col-md-10">
-            <div class="form-group">
-                {% if form.errors %}
-                    <p><strong>The form contains errors:</strong>
-                    <ul>
-                        {% for error in form.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-                <form action="" method="post" novalidate>
-                   {{ form.hidden_tag() }}
-                   <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
-                   <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
-                   <p>{{ form.submit() }}</p>
-                </form>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    {% if form.errors %}
+                        <p><strong>The form contains errors:</strong>
+                        <ul>
+                            {% for error in form.errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <form action="" method="post" novalidate>
+                       {{ form.hidden_tag() }}
+                       <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
+                       <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+                       <p>{{ form.submit() }}</p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
