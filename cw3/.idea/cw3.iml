@@ -5,6 +5,8 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/app/templates/img" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/templates/css" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -14,7 +16,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../cw3\templates" />
+        <option value="$MODULE_DIR$/app/templates" />
       </list>
     </option>
   </component>
