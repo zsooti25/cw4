@@ -23,15 +23,7 @@ def create_app(config_class=DevConfig):
     def index():
         return render_template('index.html')
 
-    from app.main.forms import SignupForm
-
-    @app.route('/signup/', methods=['POST', 'GET'])
-    def signup():
-        form = SignupForm(request.form)
-        if request.method == 'POST' and form.validate_on_submit():
-            flash('Signup requested for {}'.format(form.username.data))
-            # Code to add the student to the database goes here
-            return redirect(url_for('main.index', username=form.username.data))
-        return render_template('signup.html', form=form)
+    from app.main.routes import bp_main
+    app.register_blueprint(bp_main)
 
     return app
