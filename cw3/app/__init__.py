@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from config import DevConfig
 
@@ -22,5 +22,16 @@ def create_app(config_class=DevConfig):
     @app.route('/')
     def index():
         return render_template('index.html')
+
+    from app.main.forms import SignupForm
+
+    @app.route('/signup/', methods=['POST', 'GET'])
+    def signup():
+        form = SignupForm(request.form)
+        if request.method == 'POST' and form.validate():
+            flash('Signup requested for {}'.format(form.name.data))
+            # Code to add the student to the database goes here
+            return redirect(url_for('main.index'))
+        return render_template('signup.html', form=form)
 
     return app
