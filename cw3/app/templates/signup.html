@@ -14,11 +14,9 @@
                 {% endif %}
                 <form action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
-                    <dl>
-                        {{ render_field(form.name) }}
-                        {{ render_field(form.email) }}
-                        <dd><input type=submit value='Sign Up' class='btn btn-secondary'></dd>
-                    </dl>
+                    <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
+                    <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+                    <p>{{ form.submit() }}</p>
                 </form>
             </div>
         </div>
