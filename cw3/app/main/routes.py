@@ -9,7 +9,7 @@ bp_main = Blueprint('main', __name__)
 def signup():
     form = SignupForm(request.form)
     if request.method == 'POST' and form.validate_on_submit():
-        flash('Signup requested for {}'.format(form.name.data))
+        flash('Signup requested for {}'.format(form.username.data))
         # Code to add the student to the database goes here
         return redirect(url_for('main.index'))
     return render_template('signup.html', form=form)
