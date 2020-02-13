@@ -17,7 +17,7 @@
                         {{ form.hidden_tag() }}
                         <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
                         <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
-                        <p>{{ form.submit() }}<dd><input type=submit value='Sign Up' class='btn btn-primary'></dd></p>
+                        <p>{{ form.submit() }}<br>{{ form.submit(class='btn btn-secondary my-2 my-sm-0') }}</p>
                     </form>
                 </div>
             </div>
