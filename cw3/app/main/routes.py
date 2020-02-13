@@ -11,5 +11,5 @@ def signup():
     if request.method == 'POST' and form.validate_on_submit():
         flash('Signup requested for {}'.format(form.username.data))
         # Code to add the student to the database goes here
-        return redirect(url_for('main.index', username=form.username.data))
+        return redirect(url_for('main.index'))
     return render_template('signup.html', form=form)

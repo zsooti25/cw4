@@ -14,13 +14,10 @@
                         </ul>
                     {% endif %}
                     <form action="" method="post" novalidate>
-                            {{ form.hidden_tag() }}
-                            <dl>
-                                {{ render_field(form.username) }}
-                                {{ render_field(form.email) }}
-                                {{ render_field(form.submit) }}
-                                <dd><input type=submit value='Sign Up' class='"btn btn-secondary my-2 my-sm-0"'></dd>
-                            </dl>
+                        {{ form.hidden_tag() }}
+                        <p>{{ form.username.label }}<br>{{ form.username(size=32) }}</p>
+                        <p>{{ form.email.label }}<br>{{ form.email(size=32) }}</p>
+                        <p>{{ form.submit() }}<dd><input type=submit value='Sign Up' class='btn btn-primary'></dd></p>
                     </form>
                 </div>
             </div>
