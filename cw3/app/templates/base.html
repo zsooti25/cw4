@@ -6,7 +6,7 @@
     <title>
         {% block title %}{{ title }}{% endblock %}
     </title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -15,20 +15,20 @@
             <nav class="navbar navbar-dark bg-warning">
                 <span class="navbar-dark mb-0 h1">Robocast</span>
                 <div class="col-md-8">
-                <a class="btn btn-secondary" href=index.html
+                <a class="btn btn-secondary" href="../"
                       role="button">Home </a>
-                <a class="btn btn-secondary" href=signup.html
+                <a class="btn btn-secondary" href="../signup/"
                    role="button">Sign Up </a>
                 </div>
                 <div class="col-md-2">
-                    <img src="img/robot.png" alt="Robot placeholder image" width="200"
+                    <img src="../static/img/robot.png" alt="Robot placeholder image" width="200"
                          height="150">
                 </div>
             </nav>
         </div>
     </div><br>
 </div>
-<div role="main" class="container-fluid">
+<main role="main" class="container-fluid">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
@@ -39,6 +39,6 @@
         {% endif %}
     {% endwith %}
     {% block content %}{% endblock %}
-</div>
+</main>
 </body>
 </html>
