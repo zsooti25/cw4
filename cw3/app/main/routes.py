@@ -5,6 +5,11 @@ from app.main.forms import SignupForm
 bp_main = Blueprint('main', __name__)
 
 
+@bp_main.route('/')
+def index():
+    return render_template('index.html')
+
+
 @bp_main.route('/signup/', methods=['POST', 'GET'])
 def signup():
     form = SignupForm(request.form)
