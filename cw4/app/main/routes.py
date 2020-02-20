@@ -42,7 +42,6 @@ def search():
         if term == "":
             flash("Enter a city to search for")
             return redirect('/')
-        results = City.query.filter(City.city.contains(term)).all()
 
         results = City.query.join(Forecast).with_entities(City.city, Forecast.forecast_datetime,
                                                           Forecast.forecast, Forecast.comment).filter(
